@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Booking</title>
+    <link rel="stylesheet" href="/OurHomePG/ApplyPage/apply.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class='bx bx-home-smile bx-tada'  style='color:#00eeff'></i> Our Home PG</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#services" >Facilities</a>
+            <a href="#project" >Images</a>
+            <a href="/OurHomePG/MenuPage/Menu.html" >Meal Plan</a>
+            <a href="#contact" >Contact</a>
+
+        </nav>
+    </header>
+
+
+    
+    <section class="Booking" id="Booking">
+
+        <div class="Booking-div">
+
+            <div class="Booking-inner">
+                <h2>Seat <span>Available</span></h2>
+                <h3>Double Sharing Boys: 10</h3>
+                <h3>Triple Sharing Boys: 10</h3>
+                <h3>Triple Sharing Girls: 10</h3>
+
+            </div>
+
+            <div class="Booking-inner">
+
+                <h2>Rent</h2>
+                <h3>Double Sharing Boys: 6500</h3>
+                <h3>Triple Sharing Boys: 6500</h3>
+                <h3>Triple Sharing Girls: 6500</h3>
+
+            </div>
+
+            
+        </div>
+        <div class="Booking-div">
+
+            <main>
+                <section class="booking-form">
+                    <h2>Book Your Stay</h2>
+                    <form action="submit-booking.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Contact Number</label>
+                            <input type="text" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-in">Check-in Date</label>
+                            <input type="date" id="check-in" name="check_in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pgtype">Choose a pg:</label>
+
+                            <select name="pgtype" id="pgtype">
+                            <option value="boys2">Double Sharing Boys (Rs. 6500)</option>
+                            <option value="boys3">Triple Sharing Boys (Rs. 6500)</option>
+                            <option value="girls3">Triple Sharing Girls (Rs. 6500)</option>
+                            </select>
+                        </div>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </section>
+
+
+
+    <div class="last-text">
+        <p>Developed by Harsh © 2024</p>
+    </div>
+
+</body>
+</html>

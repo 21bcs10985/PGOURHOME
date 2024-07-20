@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+body {
+    color: #fff;
+    background: #081b29;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.navbar a:hover {
+    color: #0ef;
+}
+.Booking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Booking-div {
+    flex: 1;
+    margin: 30px;
+    background-color: transparent;
+    padding: 50px;
+    margin-top: 100px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+    width: 500px;
+    height: 510px;
+}
+.Booking-inner {
+    flex: 1;
+    margin: 30px;
+    background-color: transparent;
+    padding: 50px;
+    margin-top: -10px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+    width: 500px;
+    height: 200px;
+}
+.Booking-div h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+.Booking-div h3 {
+    font-size: 20px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+}
+.Booking-div h2 span {
+    color: #0ef;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.form-group input,
+.form-group select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0ef;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #00c3ff;
+}
+.last-text p {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7, 85, 91);
+    font-weight: 300;
+}
