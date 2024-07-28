@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
+  }
 
 .logo {
     font-size: 25px;
@@ -36,42 +36,90 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.navbar a, .nav-button {
+
+/* new */
+.nav-menu {
+    display: flex;
+  }
+
+
+
+.nav-menu a, .nav-button {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-}
-
-.navbar a:hover, .nav-button:hover {
-    color: #0ef;
-}
-
-.nav-button {
+  }
+  
+  .nav-button {
+    font-weight: bold;
     background-color: #ff4500;
     border: none;
-    padding: 10px 15px;
+    padding: 5px 8px;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
+  }
 
-.nav-button:hover {
-    background-color: #fff;
+  .navbar a:hover {
+    color: #0ef;
 }
+  
+  .nav-button:hover {
+    background-color: #fff;
+    color:#000
+  }
+  
+  
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    
+  }
+  
+  .hamburger i {
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #051129;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 99;
+    }
+
+    
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .nav-menu a, .nav-button {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
 
 .home {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 25px; /* Adjusted from 15px to account for the navbar height */
     height: 100vh;
     background: url(./HomePage/Images/Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper-overlay.png) no-repeat; 
     background-size: cover;
@@ -327,7 +375,7 @@ body {
     color: #0ef;
 }
 
-.portfolio-content {
+.image-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     align-items: center;
@@ -476,6 +524,13 @@ body {
     margin-right: 100px;
 }
 
+.coming{
+    text-align: center;
+    font-size: 50px;
+    color: #0ef;
+    margin-top: 100px;
+}
+
 .review-item { 
     padding: 20px;
     border-radius: 10px;
@@ -506,19 +561,23 @@ body {
     font-weight: 300;
 }
 
-.top {
+.book_now {
     position: fixed;
     bottom: 2.1rem;
     right: 2.1rem;
+    background-color: #ff4500;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+  
+.book_now:hover {
+    background-color: #fff;
 }
 
-.top i {
-    color: #000000;
-    background: #0ef;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 0.5rem;
-}
 
 @keyframes slideRight {
     0% {
@@ -580,7 +639,7 @@ body {
         padding: 70px 5% 0;
     }
 
-    .portfolio-content {
+    .image-content {
         padding: 50px;
     }
 }
@@ -647,7 +706,7 @@ body {
         margin: 20px 0;
     }
 
-    .portfolio-content {
+    .image-content {
         padding: 20px;
     }
 
