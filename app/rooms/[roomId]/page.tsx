@@ -1,12 +1,27 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { getRoom } from "@/lib/api";
+import { getRoom, getRooms } from "@/lib/api";
 import Badge from "@/components/ui/Badge";
 import BookingModal from "./BookingModal";
 
 interface PageProps {
   params: { roomId: string };
 }
+
+// Pre-build all known room pages at build time for static export
+export async function generateStaticParams() {
+  try {
+    const data = await getRooms({ limit: 200 });
+    return (data.rooms ?? []).map((room) => ({
+      roomId: room._id,
+    }));
+  } catch {
+    // If API is unreachable at build time, return empty — pages will 404
+    return [];
+  }
+}
+
+export const dynamicParams = false;
 
 export default async function RoomDetailPage({ params }: PageProps) {
   let room;
